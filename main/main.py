@@ -10,7 +10,7 @@ import pickle
 def get_data_clean():
 
     # Read the data
-    data = pd.read_csv(r"D:\Cancer-App\dataset\data.csv")
+    data = pd.read_csv("dataset\data.csv")
 
     # Clean the data
     data = data.drop(['Unnamed: 32', 'id'], axis=1)
@@ -48,9 +48,9 @@ def create_model(data):
 def main():
     data = get_data_clean()
     model, scaler = create_model(data)
-    with open('D:\Cancer-App\main\model.pkl', 'wb') as f:
+    with open('main\model.pkl', 'wb') as f:
         pickle.dump(model, f)
-    with open('D:\Cancer-App\main\scaler.pkl', 'wb') as f:
+    with open('main\scaler.pkl', 'wb') as f:
         pickle.dump(scaler, f)
         
         

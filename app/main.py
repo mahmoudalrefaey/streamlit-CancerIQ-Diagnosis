@@ -6,8 +6,8 @@ import numpy as np
 
 
 def add_predictions(input_data):
-    model = pickle.load(open("D:\Cancer-App\main\model.pkl", 'rb'))    
-    scaler = pickle.load(open("D:\Cancer-App\main\scaler.pkl", 'rb'))   
+    model = pickle.load(open("main\model.pkl", 'rb'))    
+    scaler = pickle.load(open("main\scaler.pkl", 'rb'))   
     
     input_array = np.array(list(input_data.values())).reshape(1,-1)
     input_array_scaled = scaler.transform(input_array)
@@ -30,7 +30,7 @@ def add_predictions(input_data):
 def get_data():
 
     # Read the data
-    data = pd.read_csv(r"D:\Cancer-App\dataset\data.csv")
+    data = pd.read_csv("dataset\data.csv")
 
     # Clean the data
     data = data.drop(['Unnamed: 32', 'id'], axis=1)
@@ -167,7 +167,7 @@ def main():
         initial_sidebar_state="expanded"
     )
     
-    with open(r"D:\Cancer-App\assets\style.css") as f:
+    with open("assets\style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     
     input_data = add_sidebar()

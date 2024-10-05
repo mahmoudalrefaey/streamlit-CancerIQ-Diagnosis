@@ -1,0 +1,22 @@
+.stColumn.st-emotion-cache-j5r0tf {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #262730;
+}
+
+.diagnosis {
+    color: #fff;
+
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.diagnosis.benign {
+    background-color: green;
+}
+.diagnosis.malicious {
+    background-color: rgb(225, 5, 5);
+}
+.diagnosis.error {
+    background-color: rgb(231, 150, 11);
+}

@@ -30,7 +30,7 @@ If you'd like to run the app locally:
 
 1. Clone the repository:
     ```bash
-    git clone <repository_url>
+    git clone <https://github.com/mahmoudalrefaey/streamlit-cancer-diagnosis/tree/main>
     ```
 2. Install the required dependencies:
     ```bash
